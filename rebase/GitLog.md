@@ -17,7 +17,7 @@ Table of Contents
     - [a. Git Log of the `main` branch](#a-git-log-of-the-main-branch)
     - [b. Git Log of the `feature_rebase` branch](#b-git-log-of-the-feature_rebase-branch)
     - [c. Git Log of the `feature_rebase_rebased` branch](#c-git-log-of-the-feature_rebase_rebased-branch)
-</blockquote>
+    </blockquote>
 
 
 ## 1. Create branches `main` and `feature_rebase`
@@ -47,13 +47,13 @@ Table of Contents
     ```console
     ~/GitHub/Git-Practice-rebase-vs-merge main*
     ❯ git add .                  
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge main*
     ❯ git commit -m "Add README.md - first commit"
     [main (root-commit) 3dfdd3d] Add README.md - first commit
     1 file changed, 2 insertions(+)
     create mode 100644 README.md
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge main
     ❯ git push                                    
     Enumerating objects: 3, done.
@@ -72,26 +72,26 @@ Table of Contents
     ~/GitHub/Git-Practice-rebase-vs-merge main
     ❯ git checkout -b feature_rebase
     Switched to a new branch 'feature_rebase'
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge feature_rebase
     ❯ git log                       
     commit 3dfdd3db1d031915ef4ebf0a5a973312b7ed5dd9 (HEAD -> feature_rebase, origin/main, main)
     Author: hao <lihaocaleo@gmail.com>
     Date:   Fri Nov 8 15:54:53 2024 -0700
-
+    
         Add README.md - first commit
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge feature_rebase
     ❯ git checkout main             
     Switched to branch 'main'
     Your branch is up to date with 'origin/main'.
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge main
     ❯ git log          
     commit 3dfdd3db1d031915ef4ebf0a5a973312b7ed5dd9 (HEAD -> main, origin/main, feature_rebase)
     Author: hao <lihaocaleo@gmail.com>
     Date:   Fri Nov 8 15:54:53 2024 -0700
-
+    
         Add README.md - first commit
     ```
 
@@ -161,33 +161,33 @@ Table of Contents
     ```console
     ~/GitHub/Git-Practice-rebase-vs-merge feature_rebase
     ❯ vi README.md                                                     
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge feature_rebase* 37s
     ❯ git add .                                                        
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge feature_rebase*
     ❯ git commit -m "Update README.md - third commit - feature_rebase"
     [feature_rebase ff0912f] Update README.md - third commit - feature_rebase
     1 file changed, 1 insertion(+)
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge feature_rebase
     ❯ git log                                                         
     commit ff0912fac08e1f250642e7a8c2a7c6ec4fbf1ef0 (HEAD -> feature_rebase)
     Author: hao <lihaocaleo@gmail.com>
     Date:   Fri Nov 8 15:58:09 2024 -0700
-
+    
         Update README.md - third commit - feature_rebase
-
+    
     commit f7c9dc38c5d1cfc8b9a1280609048b8f9cbedcaa
     Author: hao <lihaocaleo@gmail.com>
     Date:   Fri Nov 8 15:57:08 2024 -0700
-
+    
         Update README.md - second commit - feature_rebase
-
+    
     commit 3dfdd3db1d031915ef4ebf0a5a973312b7ed5dd9 (origin/main, main)
     Author: hao <lihaocaleo@gmail.com>
     Date:   Fri Nov 8 15:54:53 2024 -0700
-
+    
         Add README.md - first commit
     ```
 
@@ -208,14 +208,14 @@ Table of Contents
     ❯ git branch       
     * feature_rebase
       main
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge feature_rebase
     ❯ git branch -r                                             
       origin/main
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge feature_rebase
     ❯ git push -u origin feature_rebase
-
+    
     Enumerating objects: 8, done.
     Counting objects: 100% (8/8), done.
     Delta compression using up to 12 threads
@@ -230,19 +230,19 @@ Table of Contents
     To https://github.com/hli988/Git-Practice-rebase-vs-merge.git
     * [new branch]      feature_rebase -> feature_rebase
     branch 'feature_rebase' set up to track 'origin/feature_rebase'.
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge feature_rebase
     ❯ git branch -a
     * feature_rebase
       main
       remotes/origin/feature_rebase
       remotes/origin/main
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge feature_rebase
     ❯ git branch -vv
     * feature_rebase ff0912f [origin/feature_rebase] Update README.md - third commit - feature_rebase
       main           3dfdd3d [origin/main] Add README.md - first commit
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge feature_rebase
     ❯ git push                         
     Everything up-to-date
@@ -264,47 +264,47 @@ Table of Contents
     ❯ git checkout main                                               
     Switched to branch 'main'
     Your branch is up to date with 'origin/main'.
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge main
     ❯ git log          
     commit 3dfdd3db1d031915ef4ebf0a5a973312b7ed5dd9 (HEAD -> main, origin/main)
     Author: hao <lihaocaleo@gmail.com>
     Date:   Fri Nov 8 15:54:53 2024 -0700
-
+    
         Add README.md - first commit
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge main
     ❯ ls     
     README.md
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge main
     ❯ git touch A.md
     git: 'touch' is not a git command. See 'git --help'.
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge main
     ❯ touch A.md    
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge main*
     ❯ git add A.md  
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge main*
     ❯ git commit -m "Add A.md - second commit - main"
     [main 281f21c] Add A.md - second commit - main
     1 file changed, 0 insertions(+), 0 deletions(-)
     create mode 100644 A.md
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge main ⇡
     ❯ touch B.md
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge main* ⇡
     ❯ git add B.md                                   
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge main* ⇡
     ❯ git commit -m "Add B.md - third commit - main"
     [main 61d2669] Add B.md - third commit - main
     1 file changed, 0 insertions(+), 0 deletions(-)
     create mode 100644 B.md
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge main ⇡
     ❯ git push                                      
     Enumerating objects: 6, done.
@@ -316,27 +316,27 @@ Table of Contents
     remote: Resolving deltas: 100% (1/1), done.
     To https://github.com/hli988/Git-Practice-rebase-vs-merge.git
       3dfdd3d..61d2669  main -> main
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge main
     ❯ git log 
     commit 61d2669ebae55d025e9ef9123e6165df61e47dea (HEAD -> main, origin/main)
     Author: hao <lihaocaleo@gmail.com>
     Date:   Fri Nov 8 16:05:07 2024 -0700
-
+    
         Add B.md - third commit - main
-
+    
     commit 281f21c5a49162eed26dfee4ae3c41fd8549d552
     Author: hao <lihaocaleo@gmail.com>
     Date:   Fri Nov 8 16:04:41 2024 -0700
-
+    
         Add A.md - second commit - main
-
+    
     commit 3dfdd3db1d031915ef4ebf0a5a973312b7ed5dd9
     Author: hao <lihaocaleo@gmail.com>
     Date:   Fri Nov 8 15:54:53 2024 -0700
-
+    
         Add README.md - first commit
-
+    
     ```
 
 ### Commit history of updated `main` branch
@@ -357,43 +357,43 @@ It’s time to rebase `feature_rebase` branch onto `main` branch
     ❯ git checkout feature_rebase
     Already on 'feature_rebase'
     Your branch is up to date with 'origin/feature_rebase'.
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge feature_rebase
     ❯ git rebase main                                    
     Successfully rebased and updated refs/heads/feature_rebase.
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge feature_rebase ⇣⇡
     ❯ git log        
     commit c0be4dbd099cfbc09a2ae5b35c6de4b7861c3c55 (HEAD -> feature_rebase)
     Author: hao <lihaocaleo@gmail.com>
     Date:   Fri Nov 8 15:58:09 2024 -0700
-
+    
         Update README.md - third commit - feature_rebase
-
+    
     commit acbaa47268ea06075e74132661949945bb39f187
     Author: hao <lihaocaleo@gmail.com>
     Date:   Fri Nov 8 15:57:08 2024 -0700
-
+    
         Update README.md - second commit - feature_rebase
-
+    
     commit 61d2669ebae55d025e9ef9123e6165df61e47dea (origin/main, main)
     Author: hao <lihaocaleo@gmail.com>
     Date:   Fri Nov 8 16:05:07 2024 -0700
-
+    
         Add B.md - third commit - main
-
+    
     commit 281f21c5a49162eed26dfee4ae3c41fd8549d552
     Author: hao <lihaocaleo@gmail.com>
     Date:   Fri Nov 8 16:04:41 2024 -0700
-
+    
         Add A.md - second commit - main
-
+    
     commit 3dfdd3db1d031915ef4ebf0a5a973312b7ed5dd9
     Author: hao <lihaocaleo@gmail.com>
     Date:   Fri Nov 8 15:54:53 2024 -0700
-
+    
         Add README.md - first commit
-
+    
     ```
 
 ### Commit history of rebased `feature_rebase` branch
@@ -419,9 +419,9 @@ Instead, we create a new branch `feature_rebase_rebased`, based on the rebased l
     ```console
     ~/GitHub/Git-Practice-rebase-vs-merge feature_rebase ⇣⇡
     ❯ git checkout -b feature_rebase_rebased
-
+    
     Switched to a new branch 'feature_rebase_rebased'
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge feature_rebase_rebased
     ❯ git branch -a                                                            
       feature_rebase
@@ -429,7 +429,7 @@ Instead, we create a new branch `feature_rebase_rebased`, based on the rebased l
       main
       remotes/origin/feature_rebase
       remotes/origin/main
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge feature_rebase_rebased
     ❯ git push -u origin feature_rebase_rebased
     Enumerating objects: 8, done.
@@ -446,7 +446,7 @@ Instead, we create a new branch `feature_rebase_rebased`, based on the rebased l
     To https://github.com/hli988/Git-Practice-rebase-vs-merge.git
     * [new branch]      feature_rebase_rebased -> feature_rebase_rebased
     branch 'feature_rebase_rebased' set up to track 'origin/feature_rebase_rebased'.
-
+    
     ~/GitHub/Git-Practice-rebase-vs-merge feature_rebase_rebased
     ❯ git branch -a                            
       feature_rebase
@@ -463,14 +463,14 @@ Instead, we create a new branch `feature_rebase_rebased`, based on the rebased l
 
 ### a. Git Log of the `main` branch
 
-![Git Log of the main branch](img/git_log_main_branch.png)
+![Git Log of the main branch](../img/git_log_main_branch.png)
 
 ### b. Git Log of the `feature_rebase` branch
 
-![Git Log of the feature_rebase branch](img/git_log_feature_rebase_branch.png)
+![Git Log of the feature_rebase branch](../img/git_log_feature_rebase_branch.png)
 
 ### c. Git Log of the `feature_rebase_rebased` branch
 
-![Git Log of the feature_rebase_rebased branch](img/git_log_feature_rebase_rebased_branch.png)
+![Git Log of the feature_rebase_rebased branch](../img/git_log_feature_rebase_rebased_branch.png)
 
 ---
