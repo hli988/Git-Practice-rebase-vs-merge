@@ -459,7 +459,7 @@ Instead, we create a new branch `feature_rebase_rebased`, based on the rebased l
 
 ---
 
-## 7. Final git log of all branches
+## 7. Final Git log of all branches
 
 ### a. Git Log of the `main` branch
 
